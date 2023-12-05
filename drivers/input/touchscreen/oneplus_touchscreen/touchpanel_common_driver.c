@@ -1486,7 +1486,7 @@ static ssize_t proc_gesture_control_write(struct file *file, const char __user *
 	LeftVee_enable = (buf[0] & BIT3)?1:0;
 	RightVee_enable = (buf[0] & BIT4)?1:0;
 	Circle_enable = (buf[0] & BIT6)?1:0;
-	DouTap_enable = (buf[0] & BIT7)?1:0;
+	DouTap_enable = (buf[1] & BIT7)?1:0;
 	Sgestrue_enable = (buf[1] & BIT0)?1:0;
 	Mgestrue_enable	= (buf[1] & BIT1)?1:0;
 	Wgestrue_enable = (buf[1] & BIT2)?1:0;
