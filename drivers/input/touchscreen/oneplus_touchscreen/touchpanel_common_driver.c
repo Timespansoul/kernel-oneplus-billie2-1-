@@ -5532,8 +5532,7 @@ int register_common_touch_device(struct touchpanel_data *pdata)
             ts->force_update = 0;
         }
     }
-	//wakeup_source_init(&ts->source, "tp_syna");
-	 ts->source = wakeup_source_register(ts->dev, "tp_syna");
+	wakeup_source_init(&ts->source, "tp_syna");
 
     //step12 : enable touch ic irq output ability
     if (!ts->ts_ops->mode_switch) {
